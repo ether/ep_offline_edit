@@ -1,0 +1,13 @@
+{
+    "parts": [
+        {
+            "name": "ep_timesliderdiff",
+            "hooks": {
+                "eejsBlock_timesliderStyles": "ep_timesliderdiff/index",
+                "eejsBlock_timesliderEditbarRight": "ep_timesliderdiff/index",
+                "eejsBlock_timesliderTop": "ep_timesliderdiff/index",
+                "eejsBlock_timesliderBody": "ep_timesliderdiff/index"
+            }
+        }
+    ]
+}
