@@ -89,4 +89,5 @@ tbody {
 #timesliderDiffOutput{
   height:400px;
   overflow:scroll;
+  overflow-x:hidden;
 }

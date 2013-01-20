@@ -29,7 +29,13 @@ function updateDiffView(){
 function diffUsingJS (latestContents, targetContents) {
   var base = difflib.stringAsLines(latestContents);
   var newtxt = difflib.stringAsLines(targetContents);
+  var inlineVal = $('#updateDiffInline').attr("checked");
 
+  if(inlineVal == "checked"){
+    inlineVal = 1;
+    $('#updateDiffInline').attr("checked","true");
+  }
+ 
   var sm = new difflib.SequenceMatcher(base, newtxt);
   var opcodes = sm.get_opcodes();
   var diffoutputdiv = $("#timesliderDiffOutput");
@@ -42,9 +48,10 @@ function diffUsingJS (latestContents, targetContents) {
     newTextLines:newtxt,
     opcodes:opcodes,
     baseTextName:"Base Text",
+    viewType: inlineVal,
     newTextName:"New Text",
     contextSize:contextSize,
-    viewType: $("inline").checked ? 1 : 0 
+    viewType: inlineVal
   })
   );
 
