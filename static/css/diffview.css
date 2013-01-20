@@ -31,12 +31,13 @@ table.diff {
 	border-collapse:collapse;
 	border:1px solid darkgray;
 	white-space:pre-wrap
+        height:400px;
 }
 table.diff tbody { 
 	font-family:Courier, monospace
 }
 table.diff tbody th {
-	font-family:verdana,arial,'Bitstream Vera Sans',helvetica,sans-serif;
+/*	font-family:verdana,arial,'Bitstream Vera Sans',helvetica,sans-serif;*/
 	background:#EED;
 	font-size:11px;
 	font-weight:normal;
@@ -49,7 +50,7 @@ table.diff tbody th {
 table.diff thead {
 	border-bottom:1px solid #BBC;
 	background:#EFEFEF;
-	font-family:Verdana
+/*	font-family:Verdana*/
 }
 table.diff thead th.texttitle {
 	text-align:left
@@ -80,4 +81,12 @@ table.diff th.author {
 	text-align:right;
 	border-top:1px solid #BBC;
 	background:#EFEFEF
+}
+tbody {
+  overflow:scroll;
+}
+
+#timesliderDiffOutput{
+  height:400px;
+  overflow:scroll;
 }

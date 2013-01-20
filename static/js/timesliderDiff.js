@@ -3,6 +3,7 @@
 function updateDiffView(){
   // get text HTML of latest revision
   var latestUrl =  document.location.href.replace("/timeslider?","/export/txt");
+  latestUrl =  latestUrl.replace("/timeslider","/export/txt");
   var endUrl = $('#exportplaina').attr('href'); // the URL on focus
   var latestContents = "";
   var targetContents = "";
