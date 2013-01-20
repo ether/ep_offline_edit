@@ -9,7 +9,6 @@ Install via the /admin/plugins UI in Etherpad Lite.
 # TODO
 
 * Lots...
-* Authentication (SocketIO would fix this)
 * Use SocketIO instead of AJAX (for streaming when searching through large pads)
 * UI polishing
 * Progress indicator
