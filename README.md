@@ -1,6 +1,6 @@
 # See changes between revisions in Etherpad timeslider
 
-![Alt text](http://imgur.com/5dqPPFj)
+![Alt text](http://i.imgur.com/5dqPPFj.png)
 
 Go away from document, want to see what's been changed since you left?
 
