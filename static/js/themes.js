@@ -1,5 +1,4 @@
-
-var themes = {
+exports.themes = {
 
   init: function() {
     var theme = themes.getUrlVars()['theme'];
@@ -24,8 +23,7 @@ var themes = {
   }
 }
 
-function postAceInit(){
-  alert("wut");
+exports.postAceInit = function(hook, context){
+  exports.themes.init();
 }
 
-themes.init();
