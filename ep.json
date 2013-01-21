@@ -1,12 +1,13 @@
 {
     "parts": [
         {
-            "name": "ep_timesliderdiff",
+            "name": "ep_themes",
             "hooks": {
-                "eejsBlock_timesliderStyles": "ep_timesliderdiff/index",
-                "eejsBlock_timesliderEditbarRight": "ep_timesliderdiff/index",
-                "eejsBlock_timesliderTop": "ep_timesliderdiff/index",
-                "eejsBlock_timesliderBody": "ep_timesliderdiff/index"
+                "eejsBlock_timesliderBody": "ep_themes/index",
+                "eejsBlock_body": "ep_themes/index"
+            }, 
+            "client_hooks":{
+                "postAceInit": "ep_themes/static/js/themes"
             }
         }
     ]

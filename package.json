@@ -1,7 +1,7 @@
 {
-  "name": "ep_timesliderdiff",
-  "version": "0.0.3",
-  "description": "See a diff view showing the changes between the latest pad and a revision",
+  "name": "ep_themes",
+  "version": "0.0.1",
+  "description": "Change the colors of different parts of Etherpad Lite",
   "author": {
     "name": "John McLear",
     "email": "john@mclear.co.uk",
@@ -11,11 +11,5 @@
     "node": ">= 0.6.0"
   },
   "dependencies": {},
-  "_id": "ep_timesliderdiff@0.0.7",
-  "_from": "ep_timesliderdiff",
-  "readme": "# Search through pad history on Etherpad Lite.\n\n![Alt text](http://i.imgur.com/gLoYk.png)\n\nEver worked on a document for ages and forgotten if you ever wrote about a certain topic or thing?  Well now you can search back the history of your topic.\n\nAre you paranoid someone might of deleted your work?  Well now you can find out who quickly and easily..  Nice UI makes unicorns sing carols of passion to flop.\n\nInstall via the /admin/plugins UI in Etherpad Lite.\n\n# TODO\n\n* Lots...\n* Authentication (SocketIO would fix this)\n* Use SocketIO instead of AJAX (for streaming when searching through large pads)\n* Minimize heavy lifting for large pads (by using diffs instead of entire pad context when doing regex)\n* UI polishing\n* Progress indicator\n",
-  "readmeFilename": "README.md",
-  "dist": {
-    "shasum": "8bbb518b4049767c3f3cfaab18ec68068f783ede"
-  }
+  "readmeFilename": "README.md"
 }
