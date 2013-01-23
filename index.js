@@ -21,3 +21,8 @@ exports.eejsBlock_htmlHead = function (hook_name, args, cb) {
   return cb();
 }
 
+exports.expressServer = function (hook_name, args, cb) {
+  args.app.get('/offline.html', function(req, res) { 
+    res.send("The Etherpad Instance is not available");
+  });
+}
