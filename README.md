@@ -1,14 +1,16 @@
-# See changes between revisions in Etherpad timeslider
+# Allows you to see your document if you get disconnected.
 
-![Alt text](http://i.imgur.com/5dqPPFj.png)
+To make it work visit http://yourserver.com/ when offline and it will list the pads available
 
-Go away from document, want to see what's been changed since you left?
+It will automatically store pad changes to your localStorage.  Prolly wont work in IE <10
+
+![Alt text](http://i.imgur.com/jiO7T3U.png)
 
 Install via the /admin/plugins UI in Etherpad Lite.
 
 # TODO
 
-* Lots...
-* Use SocketIO instead of AJAX (for streaming when searching through large pads)
-* UI polishing
-* Progress indicator
+* Make it work if you visit /p/*
+* Stop it breaking EVERYTHING
+* Polish UI
+* Make content editable
