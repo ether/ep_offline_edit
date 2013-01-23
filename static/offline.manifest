@@ -1,0 +1,17 @@
+CACHE MANIFEST
+CACHE:
+/static/custom/pad.css
+/static/css/iframe_editor.css
+/static/css/pad.css
+/static/img/etherpad_lite_icons.png
+/static/img/loading.gif
+/static/img/leftarrow.png
+/static/img/connectingbar.gif
+/locales.json
+
+NETWORK:
+*
+ace2_common.js
+locales.json
+require-kernel.js
+

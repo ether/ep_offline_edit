@@ -1,30 +1,28 @@
 var $ = require('ep_etherpad-lite/static/js/rjquery').$; // use jQuery
 
 exports.aceEditEvent = function (hook_name, args, cb) {
-  offlineEdit.saveEdit();
+  offlineEdit.save();
 }
-
 
 offlineEdit = {
 
   // get padURL
   getPadHTML: function(){
-    var exportURL = $('iframe.[name="ace_outer"]').contents().find('iframe').contents().find("#innerdocbody").html();
-    return exportURL;
+    return $('iframe.[name="ace_outer"]').contents().find('iframe').contents().find("#innerdocbody").html();
   },
 
   // Save pad content to localstorage
-  saveEdit: function (){
+  save: function (){
     // when a document is edited it is stored as HTML in an object called padOffline.html
-    var padOffline = {};
-    padOffline.html = offlineEdit.getPadHTML();
-    localStorage.setItem("html", padOffline.html);
+    localStorage.setItem("html", offlineEdit.getPadHTML());
   },
 
   // Load Pad content from local storage
-  loadEdit: function(){
+  load: function(){
     // Retrieve the object from storage
-    var retrievedObject = localStorage.getItem('html');
+    var retrievedObject = localStorage.getItem("html");
     console.warn('retrievedObject: ', retrievedObject);
   }
 };
+
+
