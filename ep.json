@@ -3,13 +3,15 @@
     {
       "name": "ep_offline_edit",
       "hooks": {
-        "eejsBlock_scripts": "ep_offline_edit/index",
-        "eejsBlock_styles": "ep_offline_edit/index",
-        "eejsBlock_disconnected": "ep_offline_edit/index",
-        "eejsBlock_htmlHead": "ep_offline_edit/index"
+        "eejsBlock_scripts"      : "ep_offline_edit/index",
+        "eejsBlock_styles"       : "ep_offline_edit/index",
+        "eejsBlock_disconnected" : "ep_offline_edit/index",
+        "eejsBlock_htmlHead"     : "ep_offline_edit/index",
+        "expressConfigure"       : "ep_offline_edit/index:expressConfigure",
+        "expressCreateServer"    : "ep_offline_edit/index:expressServer"
       },
       "client_hooks":{
-        "aceEditEvent": "ep_offline_edit/static/js/offline_edit:aceEditEvent"
+        "aceEditEvent"           : "ep_offline_edit/static/js/aceEditEvent:aceEditEvent"
       }
     }
   ]

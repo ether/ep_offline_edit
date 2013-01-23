@@ -1,7 +1,7 @@
 {
-  "name": "ep_themes",
+  "name": "ep_offline_edit",
   "version": "0.0.1",
-  "description": "Change the colors of different parts of Etherpad Lite",
+  "description": "View your pad data even if you are disconnected from the Internets",
   "author": {
     "name": "John McLear",
     "email": "john@mclear.co.uk",

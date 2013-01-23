@@ -1,42 +1,14 @@
 CACHE MANIFEST
 
-#VERSION 1.2
-
+#VERSION 3.9
 CACHE:
-
-#CSS
-/static/custom/pad.css
-/static/css/iframe_editor.css
-/static/css/pad.css
-/static/plugins/ep_offline_edit/static/css/edit_offline.css
-
-#IMAGES
-/static/img/etherpad_lite_icons.png
-/static/img/loading.gif
-/static/img/leftarrow.png
-/static/img/connectingbar.gif
-
-#JS
-/static/js/l10n.js
-/static/js/html10n.js
-/static/custom/pad.js
-
-#JSON
-/locales.json
-
-
-#HTML
+/static/plugins/ep_offline_edit/static/js/offline_edit.js
+/static/plugins/ep_offline_edit/static/js/jquery.timeago.js
+/static/js/jquery.js
 /offline.html
+
+FALLBACK:
+/ /offline.html
 
 NETWORK:
 *
-/javascripts/lib/ep_etherpad-lite/static/js/ace2_common.js
-/javascripts/lib/ep_etherpad-lite/static/js/pad.js
-locales.json
-/static/js/require-kernel.js
-/socket.io/socket.io.js
-/static/pad.js
-/pluginfw/plugin-definitions.json
-
-FALLBACK:
-/static/js/require-kernel.js /offline.html

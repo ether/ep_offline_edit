@@ -1,7 +1,8 @@
-var eejs = require('ep_etherpad-lite/node/eejs');
+var eejs = require('ep_etherpad-lite/node/eejs'),
+ express = require('ep_etherpad-lite/node_modules/express');
 
 exports.eejsBlock_disconnected = function (hook_name, args, cb) {
-  args.content = args.content + eejs.require("ep_offline_edit/templates/editOfflineButton.ejs", {}, module);;
+  args.content = args.content + eejs.require("ep_offline_edit/templates/editOfflineButton.ejs", {}, module);
   return cb();
 }
 
@@ -21,8 +22,13 @@ exports.eejsBlock_htmlHead = function (hook_name, args, cb) {
   return cb();
 }
 
+
+exports.expressConfigure = function(hook_name, args, cb) {
+}
+
 exports.expressServer = function (hook_name, args, cb) {
   args.app.get('/offline.html', function(req, res) { 
-    res.send("The Etherpad Instance is not available");
+    res.send(eejs.require("ep_offline_edit/templates/offline.ejs"));
   });
 }
+
