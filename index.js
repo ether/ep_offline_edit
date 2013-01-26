@@ -18,7 +18,7 @@ exports.eejsBlock_scripts = function (hook_name, args, cb) {
 }
 
 exports.eejsBlock_htmlHead = function (hook_name, args, cb) {
-  args.content = "<html manifest='/static/plugins/ep_offline_edit/static/offline.manifest'>";
+  args.content = "<html manifest='/offlinemanifest.appcache'>";
   return cb();
 }
 
@@ -30,5 +30,11 @@ exports.expressServer = function (hook_name, args, cb) {
   args.app.get('/offline.html', function(req, res) { 
     res.send(eejs.require("ep_offline_edit/templates/offline.ejs"));
   });
+
+  args.app.get('/offlinemanifest.appcache', function(req, res) {
+    res.setHeader('Content-Type', 'text/cache-manifest');
+    res.send(eejs.require("ep_offline_edit/static/offlinemanifest.appcache"));
+  });
+
 }
 
