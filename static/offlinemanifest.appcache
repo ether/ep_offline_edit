@@ -4,16 +4,36 @@ CACHE MANIFEST
 CACHE:
 /static/plugins/ep_offline_edit/static/js/offline_edit.js
 /static/plugins/ep_offline_edit/static/js/jquery.timeago.js
+/static/plugins/ep_offline_edit/static/css/edit_offline.css
+
+/static/img/etherpad_lite_icons.png
+/static/img/loading.gif
+/static/img/leftarrow.png
+/static/img/connectingbar.gif
+
 /static/js/jquery.js
 /static/js/html10n.js
 /static/js/l10n.js
+/static/js/alert.js
+
 /static/custom/index.js
 /static/custom/index.css
+/static/css/pad.css
+/static/custom/pad.css
 /offline.html
 /locales.json
 
+/javascripts/lib/ep_etherpad-lite/static/js/pad.js
+/javascripts/lib/ep_etherpad-lite/static/js/ace2_common.js
+/static/custom/pad.js
+/socket.io/socket.io.js
+/javascripts/lib/ep_etherpad-lite/static/js/colorutils.js
+/javascripts/lib/ep_etherpad-lite/static/js/rjquery.js
+
 FALLBACK:
 / /offline.html
-
-NETWORK:
-*
+/p/ /offline.html
+/static/js/require-kernel.js /static/plugins/ep_offline_edit/static/js/blank.js
+/static/js/pad.js /static/plugins/ep_offline_edit/static/js/blank.js
+/javascripts/lib/ep_etherpad-lite/static/js/pad.js /static/plugins/ep_offline_edit/static/js/blank.js
+/javascripts/lib/ep_etherpad-lite/static/js/ace2_common.js /static/plugins/ep_offline_edit/static/js/blank.js

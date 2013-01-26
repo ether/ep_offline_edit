@@ -133,24 +133,25 @@
     </div>
   </body>
   <script type="text/javascript">
+
     $(document).ready(function() {
       var pathname = window.location.pathname;
-      if(pathname == "/" || pathname == "/offline.html"){
+
+      if(pathname == "/" || pathname == "/offline.html"){ // if we're not on a pad
         offlineEdit.listPads();
         $('a').click(function(){
           var padContents = offlineEdit.load($(this).text());
           $('#padView').html(padContents);
           $('#padView').show();
         });
-      }else{
+
+      }else{ // If we're on a pad
         var padId = pathname.split('/');
         padId = padId[padId.length - 1];
         var padContents = offlineEdit.load($(padId).text());
         $('#padView').html(padContents);
         $('#padView').show();
       }
-
-
     });
   </script>
 </html>
