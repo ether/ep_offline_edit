@@ -3,6 +3,7 @@ CACHE MANIFEST
 #VERSION 4.2
 CACHE:
 /static/plugins/ep_offline_edit/static/js/offline_edit.js
+/javascripts/lib/ep_offline_edit/static/js/aceEditEvent.js
 /static/plugins/ep_offline_edit/static/js/jquery.timeago.js
 /static/plugins/ep_offline_edit/static/css/edit_offline.css
 
@@ -20,8 +21,12 @@ CACHE:
 /static/custom/index.css
 /static/css/pad.css
 /static/custom/pad.css
+/static/css/iframe_editor.css
+
 /offline.html
+
 /locales.json
+/pluginfw/plugin-definitions.json
 
 /javascripts/lib/ep_etherpad-lite/static/js/pad.js
 /javascripts/lib/ep_etherpad-lite/static/js/ace2_common.js
