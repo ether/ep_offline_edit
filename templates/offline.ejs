@@ -134,12 +134,23 @@
   </body>
   <script type="text/javascript">
     $(document).ready(function() {
-      offlineEdit.listPads();
-      $('a').click(function(){
-        var padContents = offlineEdit.load($(this).text());
+      var pathname = window.location.pathname;
+      if(pathname == "/" || pathname == "/offline.html"){
+        offlineEdit.listPads();
+        $('a').click(function(){
+          var padContents = offlineEdit.load($(this).text());
+          $('#padView').html(padContents);
+          $('#padView').show();
+        });
+      }else{
+        var padId = pathname.split('/');
+        padId = padId[padId.length - 1];
+        var padContents = offlineEdit.load($(padId).text());
         $('#padView').html(padContents);
         $('#padView').show();
-      });
+      }
+
+
     });
   </script>
 </html>

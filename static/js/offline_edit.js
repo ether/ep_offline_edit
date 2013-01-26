@@ -38,7 +38,7 @@ var offlineEdit = {
   listPads: function(){
     var pads = offlineEdit.loadPads();
     for (var key in pads){
-      var pad = "<div><span id='padId'><a class='padIdLink'>"+key+"</a></span>";
+      var pad = "<div><span id='padId'><b><a class='padIdLink'>"+key+"</a></b></span>";
       var obj = pads[key];
       for (var prop in obj){
 
