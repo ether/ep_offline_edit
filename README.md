@@ -10,7 +10,6 @@ Install via the /admin/plugins UI in Etherpad Lite.
 
 # TODO
 
-* Make it work if you visit /p/*
-* Stop it breaking EVERYTHING
 * Polish UI
 * Make content editable
+* Get a sponsor..
