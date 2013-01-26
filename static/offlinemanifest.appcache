@@ -15,7 +15,7 @@ CACHE:
 /static/js/jquery.js
 /static/js/html10n.js
 /static/js/l10n.js
-/static/js/alert.js
+/static/js/blank.js
 
 /static/custom/index.js
 /static/custom/index.css
