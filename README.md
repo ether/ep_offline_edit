@@ -1,5 +1,7 @@
 # Allows you to see your document if you get disconnected.
 
+It should also make loads of pad pages quicker.
+
 To make it work visit http://yourserver.com/ when offline and it will list the pads available
 
 It will automatically store pad changes to your localStorage.  Prolly wont work in IE <10
