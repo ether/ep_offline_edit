@@ -7,7 +7,10 @@ var offlineEdit = {
 
   // Save pad content to localstorage and to list of pads
   save: function (){
-    var padId = $('input[name=padId]').val();
+    var pathname = window.location.pathname;
+    var padId = pathname.split('/');
+    padId = padId[padId.length - 1];
+
     // when a document is edited it is stored as HTML in an object called padOffline.html
     localStorage.setItem(padId, offlineEdit.getPadHTML());
 
@@ -56,3 +59,4 @@ var offlineEdit = {
 };
 
 
+//blpmaXT35R  

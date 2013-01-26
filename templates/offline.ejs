@@ -136,8 +136,9 @@
 
     $(document).ready(function() {
       var pathname = window.location.pathname;
+      var padId = getUrlVars()["padId"];
 
-      if(pathname == "/" || pathname == "/offline.html"){ // if we're not on a pad
+      if(!padId){ // if we're not on a pad
         offlineEdit.listPads();
         $('a').click(function(){
           var padContents = offlineEdit.load($(this).text());
@@ -146,13 +147,25 @@
         });
 
       }else{ // If we're on a pad
-        var padId = pathname.split('/');
-        padId = padId[padId.length - 1];
-        var padContents = offlineEdit.load($(padId).text());
+        var padContents = offlineEdit.load(padId);
         $('#padView').html(padContents);
         $('#padView').show();
       }
     });
+
+
+    function getUrlVars() {
+      var vars = {};
+      var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+      });
+      return vars;
+    }
+
+    function safe_tags(str) {
+      return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;') ;
+    }
+
   </script>
 </html>
 
