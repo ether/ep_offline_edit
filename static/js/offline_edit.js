@@ -2,7 +2,7 @@ var offlineEdit = {
 
   // get HTML
   getPadHTML: function(){
-    return $('iframe.[name="ace_outer"]').contents().find('iframe').contents().find("#innerdocbody").html();
+    return $('iframe[name="ace_outer"]').contents().find('iframe').contents().find("#innerdocbody").html();
   },
 
   // Save pad content to localstorage and to list of pads
