@@ -1,0 +1,16 @@
+availableMethods = { getText: function () {
+
+var offline : {
+  // when a document is edited it is stored as HTML in an object called padOffline.html
+  var padOffline = {},
+
+  padOffline.html = "testing",
+  
+  localStorage.setItem("html", padOffline.html);
+  
+  // Retrieve the object from storage
+  var retrievedObject = localStorage.getItem('html');
+
+  console.warn('retrievedObject: ', retrievedObject);
+}
+
