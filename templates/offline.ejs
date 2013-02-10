@@ -1,5 +1,5 @@
 <!doctype html>
-<html manifest='/static/plugins/ep_offline_edit/static/offline.manifest'>
+<html>
   <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
   <title>Offline Pad View</title>
@@ -133,14 +133,39 @@
     </div>
   </body>
   <script type="text/javascript">
+
     $(document).ready(function() {
-      offlineEdit.listPads();
-      $('a').click(function(){
-        var padContents = offlineEdit.load($(this).text());
+      var pathname = window.location.pathname;
+      var padId = getUrlVars()["padId"];
+
+      if(!padId){ // if we're not on a pad
+        offlineEdit.listPads();
+        $('a').click(function(){
+          var padContents = offlineEdit.load($(this).text());
+          $('#padView').html(padContents);
+          $('#padView').show();
+        });
+
+      }else{ // If we're on a pad
+        var padContents = offlineEdit.load(padId);
         $('#padView').html(padContents);
         $('#padView').show();
-      });
+      }
     });
+
+
+    function getUrlVars() {
+      var vars = {};
+      var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+      });
+      return vars;
+    }
+
+    function safe_tags(str) {
+      return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;') ;
+    }
+
   </script>
 </html>
 
