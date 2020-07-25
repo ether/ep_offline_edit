@@ -1,6 +1,6 @@
 {
   "name": "ep_offline_edit",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "View your pad data even if you are disconnected from the Internets",
   "author": {
     "name": "John McLear",
@@ -10,9 +10,9 @@
   "engines": {
     "node": ">= 0.6.0"
   },
-  "repository" : {
-    "type" : "git",
-    "url"  : "https://github.com/JohnMcLear/ep_offline_edit.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JohnMcLear/ep_offline_edit.git"
   },
   "dependencies": {},
   "readmeFilename": "README.md"
