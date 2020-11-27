@@ -5,4 +5,4 @@ var pathname = window.location.pathname;
 var padId = pathname.split('/');
 padId = padId[padId.length - 1];
 // redirect to offline.html with a padId set as a param
-window.location.href = "/offline.html?padId="+padId;
+window.location.href = `/offline.html?padId=${padId}`;
