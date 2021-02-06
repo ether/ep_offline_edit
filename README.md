@@ -1,3 +1,5 @@
+# Currently broken
+
 # Allows you to see your document if you get disconnected.
 
 It should also make loads of pad pages quicker.
