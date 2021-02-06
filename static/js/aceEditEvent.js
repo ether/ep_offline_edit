@@ -1,3 +1,5 @@
-exports.aceEditEvent = function (hook_name, args, cb) {
+'use strict';
+/* global offlineEdit */
+exports.aceEditEvent = (hookName, args, cb) => {
   offlineEdit.save();
 };

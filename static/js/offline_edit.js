@@ -1,12 +1,13 @@
-var offlineEdit = {
+'use strict';
+
+const offlineEdit = {
 
   // get HTML
-  getPadHTML() {
-    return $('iframe[name="ace_outer"]').contents().find('iframe').contents().find('#innerdocbody').html();
-  },
+  getPadHTML: () => $('iframe[name="ace_outer"]').contents().find('iframe')
+      .contents().find('#innerdocbody').html(),
 
   // Save pad content to localstorage and to list of pads
-  save() {
+  save: () => {
     const pathname = window.location.pathname;
     let padId = pathname.split('/');
     padId = padId[padId.length - 1];
@@ -26,26 +27,25 @@ var offlineEdit = {
   },
 
   // Load Pad content from local storage
-  load(padId) {
+  load: (padId) => {
     // Retrieve the object from storage
     const padContents = localStorage.getItem(padId);
     return padContents;
   },
 
   // Load all available pads from local storage
-  loadPads() {
-    const pads = JSON.parse(localStorage.getItem('pads'));
-    return pads;
-  },
+  loadPads: () => JSON.parse(localStorage.getItem('pads')),
 
-  listPads() {
+  listPads: () => {
     const pads = offlineEdit.loadPads();
-    for (const key in pads) {
+    for (const key of pads) {
       let pad = `<div><span id='padId'><b><a class='padIdLink'>${key}</a></b></span>`;
       const obj = pads[key];
       for (const prop in obj) {
-        if (prop == 'timestamp') {
-          pad += `<span id='timestamp'> Last edited <time class='timeago' datetime='${obj[prop]}'></time></span>`;
+        if (prop === 'timestamp') {
+          pad += `<span id='timestamp'>
+            Last edited <time class='timeago' datetime='${obj[prop]}'></time>
+            </span>`;
         } else {
           pad += obj[prop];
         }
@@ -56,6 +56,3 @@ var offlineEdit = {
     $('time.timeago').timeago();
   },
 };
-
-
-// blpmaXT35R
