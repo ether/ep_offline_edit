@@ -1,19 +1,13 @@
-# Currently broken
+# Allows you to see your document if you get disconnected from the Internet.
 
-# Allows you to see your document if you get disconnected.
+Also should speed up pad load times.
 
-It should also make loads of pad pages quicker.
+# Note: HTTPS required.
 
-To make it work visit http://yourserver.com/ when offline and it will list the pads available
+# Todo
+  * Offline editing
+  * i18n
+  * Test Coverage
 
-It will automatically store pad changes to your localStorage.  Prolly wont work in IE <10
-
-![Alt text](http://i.imgur.com/jiO7T3U.png)
-
-Install via the /admin/plugins UI in Etherpad Lite.
-
-# TODO
-
-* Polish UI
-* Make content editable
-* Get a sponsor..
+# License
+Apache 2

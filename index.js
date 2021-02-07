@@ -12,7 +12,8 @@ exports.eejsBlock_styles = (hookName, args, cb) => {
 
 exports.eejsBlock_scripts = (hookName, args, cb) => {
   args.content +=
-      "<script src='/static/plugins/ep_offline_edit/static/js/offline_edit.js'></script>";
+    '<script src="/static/plugins/ep_offline_edit/static/js/offline_edit.js"></script>' +
+    '<script src="/static/plugins/ep_offline_edit/static/js/lib/localForage.js"></script>';
   cb();
 };
 
