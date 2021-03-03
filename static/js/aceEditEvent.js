@@ -1,6 +1,6 @@
 'use strict';
 /* globals localforage */
-exports.aceEditEvent = (hookName, args, cb) => {
+exports.aceEditEvent = (hookName, args) => {
   // only get edits
   if (!args.callstack.docTextChanged) return;
   // dont get initial text because it wont be the full contents
