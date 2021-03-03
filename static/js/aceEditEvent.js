@@ -15,5 +15,4 @@ exports.aceEditEvent = (hookName, args) => {
   } catch (err) {
     console.log(err);
   }
-  cb();
 };
