@@ -1,6 +1,6 @@
 {
   "name": "ep_offline_edit",
-  "version": "0.0.34",
+  "version": "0.0.35",
   "description": "View your pad data even if you are disconnected from the Internets",
   "author": {
     "name": "John McLear",
